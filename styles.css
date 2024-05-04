@@ -1,0 +1,932 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Adjust the z-index as needed */
+}
+
+
+.navbar {
+    background-color: #333; /* Navbar background color */
+    padding: 10px 20px; /* Padding around navbar */
+    z-index: 2000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem; /* Logo font size */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Move navbar links to the right */
+}
+
+.nav-item {
+    margin-right: 15px; /* Spacing between navbar items */
+}
+
+.nav-link {
+    color: white; /* Navbar link color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.1rem; /* Navbar link font size */
+}
+
+.nav-link:hover {
+    color: #ffc107; /* Change color on hover */
+}
+
+.navbar-text {
+    color: white; /* Text color */
+    font-size: 1.1rem; /* Text font size */
+}
+
+.contact-info {
+    background-color: #555; /* Background color for the contact information section */
+    padding: 10px 20px; /* Padding around the contact information */
+}
+
+.contact-info .navbar-text {
+    color: white; /* Text color */
+    font-size: 1.1rem; /* Text font size */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown menu by default */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* Show dropdown menu on hover */
+}
+
+
+
+/* ==================================================
+ 2. CSS FOR FOOTER
+================================================== */
+
+footer {
+    background: linear-gradient(to bottom, lightgrey 50%, lightgrey 50%);
+}
+
+
+footer .container {
+    max-width: 1200px; /* Set maximum width for the container */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+footer .col-md-4 {
+    flex: 0 0 calc(33.33% - 20px); /* Set the width of each column */
+    margin-bottom: 30px; /* Add space between columns */
+    margin-right: 20px; /* Add space between columns */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+footer .col-md-4:last-child {
+    margin-right: 0;
+}
+
+
+footer img {
+    max-width: 100%; /* Ensure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+
+footer p {
+    margin-bottom: 10px; /* Add space between paragraphs */
+    
+}
+
+
+footer h4 {
+    color: green; /* Heading color */
+    font-size: 20px; /* Heading font size */
+    margin-bottom: 15px; /* Add space below the heading */
+}
+
+
+footer ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+
+footer li {
+    margin-bottom: 10px; /* Add space between list items */
+}
+
+
+footer li a {
+    color: black; /* Link color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition on color change */
+    
+}
+
+
+footer li a:hover {
+    color: blue; /* Change color on hover */
+}
+
+
+footer .container-fluid {
+    background-color: #333; 
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+}
+
+
+.social-links {
+    margin-top: 20px; /* Add some space above the social media links */
+}
+
+.social-links a {
+    margin-right: 10px; /* Add some space between each social media link */
+}
+
+.social-links img {
+    width: 40px; /* Set the width of the social media icons */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Make the images circular */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+}
+
+
+.contact-footer {
+    margin-bottom: 10px; /* Add some space between each contact info */
+  }
+  
+  .contact-footer a {
+    text-decoration: none; /* Remove underline from the anchor tag */
+    color: inherit; /* Inherit text color */
+  }
+  
+  .contact-footer .icon {
+    display: inline-block;
+    width: 30px; /* Adjust the width and height to make the icon round */
+    height: 30px;
+    border-radius: 50%; /* Make the icon round */
+    overflow: hidden; /* Ensure the image inside is clipped to the rounded shape */
+    margin-right: 10px; /* Add some space between the icon and text */
+    transition: transform 0.3s ease-in-out; /* Add smooth transition effect */
+  }
+  
+  .contact-footer .icon:hover {
+    transform: scale(1.1); /* Increase the size of the icon on hover */
+  }
+  
+  .contact-footer img {
+    display: block;
+    width: 100%; /* Make the image fill the round container */
+  }
+/*==================================================
+ 3. CSS FOR services
+===================================================*/
+.services-section {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 80px 0; /* Adjust padding as needed */
+}
+
+.services-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.services-section .row {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order of items */
+}
+
+.services-section .col-md-6:last-child {
+    position: absolute;
+    top: 80px; /* Adjust according to the navbar height */
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-section .col-md-6:last-child img {
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - 80px - 160px); /* Adjust according to navbar height and padding */
+    object-fit: contain; /* Ensure the entire image fits within its container */
+}
+
+.services-section h2, .services-section p {
+    color: #ffffff; /* Text color */
+    text-align: left; /* Text alignment */
+    margin-bottom: 30px; /* Bottom margin */
+}
+
+.services-section h2 {
+    font-weight: bold; /* Font weight */
+    margin: 1%;
+}
+
+.container .row .col-md-12 p {
+    color: #ffffff; /* Text color */
+    font-size: 15px; /* Font size */
+    line-height: 0.2;
+    
+}
+.navbar {
+    z-index: 9999; /* Ensure navbar stays on top */
+}
+/* ==================================================
+ 4. CSS FOR Anmation
+================================================== */
+.top-section {
+    background-image: url(images/image.png);
+    background-size: cover;
+    background-color: #f5f5f5;
+    padding: 50px 0;
+}
+
+.container {
+    position: relative; /* Position the container */
+    padding-right: 300px; /* Set right padding to create space for the counters */
+}
+.container h2{
+    font-weight: bolder;
+}
+.counters {
+    position: absolute; /* Position the counters */
+    top: 0; /* Align to the top of the container */
+    right: 0; /* Align to the right of the container */
+    display: flex;
+    flex-direction: row; /* Arrange items vertically */
+    align-items: flex-end; /* Align items to the end (right side) */
+}
+
+.counter {
+    font-size: 40px;
+    font-weight: bold;
+    color: #e20d0d;
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+.counters p {
+    font-size: 16px;
+    color: blue;
+    margin-bottom: 20px; /* Increase or decrease margin as needed */
+    font-family: 'Times New Roman', Times, serif;
+    margin-right: 20px; /* Adjust margin as needed */
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+
+
+/* ==================================================
+ 5. CSS FOR About
+================================================== */
+
+
+.page-title {
+    
+    background-size: cover; /* Ensure the background image covers the entire section */
+    background-position: center; /* Center the background image */
+    padding: 20px 0; /* Add padding for spacing */
+    color: black;
+    background-color: grey;
+   
+}
+
+.page-title h1 {
+    margin-bottom: 0; /* Remove default bottom margin of h1 */
+}
+
+.breadcrumb {
+    margin-bottom: 0; /* Remove default bottom margin of breadcrumb */
+}
+
+.breadcrumb .breadcrumb-item a {
+    color: #007bff; /* Link color */
+}
+
+.breadcrumb .breadcrumb-item.active {
+    color: #333; /* Active link color */
+}
+
+  
+.about-section {
+    padding: 50px 0;
+    background-size: cover;
+    background-position: center;
+   
+   
+}
+
+.about-section h2 {
+    color: #007bff; /* Blue color for the heading */
+    margin-bottom: 20px;
+}
+.typing-animation {
+    white-space: pre-wrap; /* Preserve line breaks */
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.about-section .btn-contact {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+    margin-top: 20px;
+}
+
+.about-section .btn-contact:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+/*********************************
+ 6. CSS For Contact
+*********************************/
+
+.contact
+{
+	padding-top: 110px;
+	padding-bottom: 110px;
+}
+.info
+{
+	max-width: 260px;
+}
+.info_title
+{
+	font-family: 'gill', sans-serif;
+	font-size: 30px;
+	color: #212121;
+	margin-top: 50px;
+}
+.info ul
+{
+	margin-top: 19px;
+    
+}
+.info ul li
+{
+	margin-bottom: 19px;
+	font-size: 14px;
+	color: #838383;
+    
+}
+.contact_form_container
+{
+	margin-top: 60px;
+}
+.contact_form
+{
+	width: 100%;
+}
+.input_item
+{
+	width: 100%;
+	height: 47px;
+	border: solid 2px #b5b5b5;
+	margin-bottom: 24px;
+	padding-left: 27px;
+	outline: none;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.dropdown_item
+{
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+	background-image: url(../images/dropdown.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+.input_item:focus
+{
+	border-color: #003679;
+}
+.dropdown_item option
+{
+	font-style: normal;
+	font-size: 14px;
+	color: #212121;
+}
+.contact_message
+{
+	height: 122px;
+	padding-top: 12px;
+}
+.input_item::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+} 
+.input_item:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item::input-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.contact_button
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 47px;
+	background: #ffa800;
+	line-height: 47px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	z-index: 1;
+}
+
+
+
+/*********************************
+consult us
+*********************************/
+/* Styling for the consultation section */
+.consultation-section {
+    background-size: cover;
+    background-position: center;
+    padding: 80px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.consultation-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.consultation-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.consultation-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.consultation-section .btn-contact {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.consultation-section .btn-contact:hover {
+    background-color: #0056b3;
+}
+
+/*********************************
+call Back
+*********************************/
+
+.call
+{
+	width: 100%;
+	background: #FFFFFF;
+    
+}
+.call_image
+{
+	position: absolute;
+	bottom: 0;
+	left: 15px;
+	width: 100%;
+}
+.call_image img
+{
+	max-width: 100%;
+}
+.call_container
+{
+	padding-top: 110px;
+	padding-bottom: 110px;
+}
+.call_form_container
+{
+	margin-top: 76px;
+}
+/* Define the animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the elements */
+.section_subtitle.animated,
+.section_title.animated {
+    animation: fadeIn 1s ease forwards;
+}
+
+.call_form
+{
+	width: 100%;
+}
+.input_item
+{
+	width: 100%;
+	height: 47px;
+	border: solid 2px #b5b5b5;
+	margin-bottom: 24px;
+	padding-left: 27px;
+	outline: none;
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.dropdown_item
+{
+	-webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+	-webkit-box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+	background-image: url(../images/dropdown.png);
+	background-position: center right;
+	background-repeat: no-repeat;
+}
+.input_item:focus
+{
+	border-color: #003679;
+}
+.dropdown_item option
+{
+	font-style: normal;
+	font-size: 14px;
+	color: #212121;
+}
+.input_item::-webkit-input-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item:-moz-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item::-moz-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+} 
+.input_item:-ms-input-placeholder
+{ 
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.input_item::input-placeholder
+{
+	font-size: 12px !important;
+	font-style: italic !important;
+	font-weight: 400 !important;
+	color: #a0a0a0 !important;
+}
+.call_form_submit
+{
+	width: 100%;
+	height: 47px;
+	overflow: hidden;
+}
+.call_button
+{
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 47px;
+	background: #ffa800;
+	line-height: 47px;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	font-weight: 500;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	z-index: 1;
+}
+
+/*==========================
+Web hosting
+=============================*/
+.container-apeli {
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.page-title {
+background-size: cover; /* Ensure the background image covers the entire section */
+background-position: center; /* Center the background image */
+padding: 20px 0; /* Add padding for spacing */
+color: black;
+background-color: grey;
+
+}
+
+.page-title h1 {
+margin-bottom: 0; /* Remove default bottom margin of h1 */
+}
+
+
+.breadcrumb {
+margin-bottom: 0; /* Remove default bottom margin of breadcrumb */
+}
+
+.breadcrumb-item a {
+    color: #fff;
+}
+
+.hero {
+    background-color: wheat;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0062cc;
+}
+
+.services,
+.features {
+    padding: 40px 0;
+}
+
+.services h2,
+.features h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.service-card,
+.feature-card {
+    display: inline-block;
+    width: 30%;
+    margin: 0 5% 20px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.service-card img,
+.feature-card img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.service-card h3,
+.feature-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.service-card p,
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.call-to-action {
+    background-color: #f5f5f5;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn.btn-primary {
+    background-color: #007bff;
+}
+
+/* Add transition for smoother animation */
+.section-zoom {
+    transition: transform 0.3s ease-in-out;
+}
+
+.zoomed {
+    transform: scale(1.1); /* Adjust the scale factor as needed */
+}
+
+/*pricing*/
+.pricing-section {
+    background-color: #f0f0f0; /* Different color for section background */
+    padding: 20px; /* Adjust padding as needed */
+    margin-bottom: 20px; /* Add some space below the section */
+}
+
+.pricing-section h1 {
+    text-align: center; /* Center the h1 */
+}
+
+.box{
+    transition: all 0.3s ease;
+}
+
+.box.hovered{
+    transform: scale(1.1);
+}
+
+.pricing-table {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+margin: 0 auto;
+width: 80%;
+}
+
+.pricing-table .box {
+background-color: #f2f2f2;
+border: 1px solid #ddd;
+padding: 20px;
+margin: 10px;
+width: calc(30% - 20px); /* Adjust width and margin as needed */
+text-align: center;
+}
+
+.pricing-table .box h2 {
+margin-top: 0;
+padding: 10px 0;
+border-bottom: 1px solid #ddd;
+}
+
+.pricing-table .box ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.pricing-table .box ul li {
+margin-bottom: 10px;
+}
+
+.pricing-table .box .price {
+font-size: 24px;
+margin: 10px 0;
+}
+
+.pricing-table .box button {
+background-color: #007bff;
+color: white;
+border: none;
+padding: 10px 20px;
+margin-top: 10px;
+cursor: pointer;
+}
+
+/*==========================
+testimonials
+=============================*/
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.testimonial-item {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-item p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.testimonial-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.testimonial-item span {
+    font-size: 24px;
+    color: #ff9800; /* Adjust color as needed */
+}
